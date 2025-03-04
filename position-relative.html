@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position: valori e possibilità</title>
+    <style>
+      .relative {
+        position: relative;
+        border: 2px solid red;
+      }
+
+      .box {
+        position: relative;
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+      }
+
+      #second {
+        top: -102px;
+        /* right: 0; */
+        left: 200px;
+        box-sizing: content-box;
+      }
+
+      .card {
+        width: 200px;
+        height: 250px;
+        border: 1px solid black;
+        border-radius: 20px;
+        background-color: darkcyan;
+      }
+
+      .card {
+        text-align: center;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+          'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: white;
+      }
+
+      .card img {
+        width: 100%;
+      }
+
+      .card .badge {
+        color: white;
+        width: 40px;
+        font-size: 0.8em;
+        background-color: red;
+        border-radius: 40%;
+        /* posiziono il badge sopra la card */
+        position: relative;
+        top: -195px;
+        left: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>POSITION: RELATIVE</h2>
+      <p>
+        Un elemento con position: relative è posizionato RELATIVAMENTE a quella
+        che sarebbe la sua posizione normale (position: static). Possiamo
+        utilizzare le proprietà "aggiuntive" top, bottom, left e right per
+        scostare l'elemento dalla sua posizione originale.
+      </p>
+    </header>
+    <main>
+      <div class="relative">
+        Questo div è posizionato con position: relative
+      </div>
+      <div class="box" id="first"></div>
+      <p>lorem lorem lorem lorem lorem lorem lorem lorem</p>
+      <div class="box" id="second"></div>
+      <!-- position, in generale, NON è un valido alleato nell'impaginazione! -->
+      <div class="card">
+        <p>Panino con la mortazza!</p>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxhtucJfRG2SrfsGvEZ9HV7_k--x16A33JDw&s"
+          alt="mortazza"
+        />
+        <div class="badge">NEW!</div>
+      </div>
+    </main>
+  </body>
+</html>

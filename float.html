@@ -26,9 +26,15 @@
           nel modo previsto -->
       <!-- Come si risolve questo problema? Si risolve grazie alla proprietà "clear" -->
       <!-- "clear" è una proprietà CSS che serve a "resettare", "ripulire" -->
-      <aside>
+      <aside id="left-dog">
         <img src="https://placedog.net/400" alt="doggo" />
       </aside>
+      <aside id="right-dog">
+        <img src="https://placedog.net/400" alt="doggo" />
+      </aside>
+      <!-- se ho dei contenuti da flottare e del contenuto che deve confluire
+       nello spazio libero, in HTML vanno PRIMA tutti i contenuti con float
+       e DOPO tutti i contenuti senza float (e prima o poi, il clear) -->
       <section>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ullam,

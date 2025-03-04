@@ -32,8 +32,14 @@ nav li a {
   color: black;
 }
 
-aside {
+/* aside sx */
+#left-dog {
   float: left;
+}
+
+/* aside dx */
+#right-dog {
+  float: right;
 }
 
 aside img {
@@ -51,6 +57,9 @@ footer {
    */
   /* impostare un valore di clear pari al valore del float precedentemente impostato */
   clear: left;
+  background-color: darkviolet;
+  color: white;
+  padding: 0.25em 0;
 }
 
 @media screen and (min-width: 576px) {
