@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position: valori e possibilità</title>
+    <style>
+      .absolute {
+        position: absolute;
+        border: 2px solid red;
+      }
+
+      .card {
+        text-align: center;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+          'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: white;
+        width: 30%;
+        height: 250px;
+        border: 1px solid black;
+        border-radius: 20px;
+        background-color: darkcyan;
+        margin-top: 60px; /* mi stacco dalla scritta */
+        position: relative;
+      }
+
+      .card img {
+        width: 100%;
+      }
+
+      .card .badge {
+        color: white;
+        width: 40px;
+        font-size: 0.8em;
+        background-color: red;
+        border-radius: 40%;
+        /* posiziono il badge sopra la card */
+        position: absolute;
+        top: -7px;
+        right: 5px;
+      }
+
+      .cards .card {
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>POSITION: ABSOLUTE</h2>
+      <p>
+        Un elemento con position: absolute viene completamente RIMOSSO dal flow
+        della pagina, e viene posizionato grazie a top, bottom, left e right
+        utilizzando come riferimenti i bordi del documento. Es. bottom: 0
+        ancorerà l'elemento sempre al fondo del documento. Ma c'è di più!
+        Position: absolute lavora molto bene in combinazione con position:
+        relative. Abbiamo visto che un elemento posizionato con absolute
+        prenderà implicitamente come riferimenti i bordi del documento. C'è però
+        un caso particolare: se l'elemento in absolute possiede tra i suoi
+        genitori (contenitori) un elemento dotato di position: relative,
+        prenderà LUI come riferimento, invece del documento stesso.
+
+        <!-- REGOLA -->
+
+        Un elemento dotato di position absolute prenderà come riferimento per
+        top/bottom/left/right il più prossimo genitore dotato di positioning NON
+        static. In caso non trovasse NESSUN genitore/nonno/bisnonno etc. dotato
+        di position NON static, prenderà come riferimento per top/bottom/
+        left/right i bordi del documento.
+      </p>
+    </header>
+    <main>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium
+        velit ipsam natus dicta quia in inventore ducimus nostrum, aspernatur
+        sint quasi beatae. Illo quaerat sunt temporibus. Labore nisi nulla
+        nihil?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium
+        velit ipsam natus dicta quia in inventore ducimus nostrum, aspernatur
+        sint quasi beatae. Illo quaerat sunt temporibus. Labore nisi nulla
+        nihil?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium
+        velit ipsam natus dicta quia in inventore ducimus nostrum, aspernatur
+        sint quasi beatae. Illo quaerat sunt temporibus. Labore nisi nulla
+        nihil?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium
+        velit ipsam natus dicta quia in inventore ducimus nostrum, aspernatur
+        sint quasi beatae. Illo quaerat sunt temporibus. Labore nisi nulla
+        nihil?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium
+        velit ipsam natus dicta quia in inventore ducimus nostrum, aspernatur
+        sint quasi beatae. Illo quaerat sunt temporibus. Labore nisi nulla
+        nihil?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium
+        velit ipsam natus dicta quia in inventore ducimus nostrum, aspernatur
+        sint quasi beatae. Illo quaerat sunt temporibus. Labore nisi nulla
+        nihil?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium
+        velit ipsam natus dicta quia in inventore ducimus nostrum, aspernatur
+        sint quasi beatae. Illo quaerat sunt temporibus. Labore nisi nulla
+        nihil?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium
+        velit ipsam natus dicta quia in inventore ducimus nostrum, aspernatur
+        sint quasi beatae. Illo quaerat sunt temporibus. Labore nisi nulla
+        nihil?
+      </p>
+      <div class="absolute">
+        Questo div è posizionato con position: absolute
+      </div>
+
+      <!-- rifaccio l'esempio della card, questa volta con la combo absolute/relative -->
+      <div class="cards">
+        <div class="card">
+          <p>Panino con la mortazza!</p>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxhtucJfRG2SrfsGvEZ9HV7_k--x16A33JDw&s"
+            alt="mortazza"
+          />
+          <div class="badge">NEW!</div>
+        </div>
+        <div class="card">
+          <p>Panino con la mortazza!</p>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxhtucJfRG2SrfsGvEZ9HV7_k--x16A33JDw&s"
+            alt="mortazza"
+          />
+          <div class="badge">NEW!</div>
+        </div>
+        <div class="card">
+          <p>Panino con la mortazza!</p>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxhtucJfRG2SrfsGvEZ9HV7_k--x16A33JDw&s"
+            alt="mortazza"
+          />
+          <div class="badge">NEW!</div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
