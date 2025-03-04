@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Z-INDEX e sovrapposizione di elementi</title>
+    <style>
+      .big-box {
+        width: 250px;
+        height: 250px;
+        margin: 0 auto;
+        border: 2px solid black;
+        /* position: relative servirà ad ancorare gli scostamenti dei tre
+        quadratini ai bordi di questo parent (e non ai bordi della finestra) */
+        position: relative;
+      }
+
+      .big-box div {
+        /* tutte e tre le scatoline */
+        width: 150px;
+        height: 150px;
+        position: absolute;
+      }
+
+      #red {
+        background-color: red;
+        /* fornisco al red il valore più alto */
+        z-index: 20;
+      }
+      #green {
+        background-color: green;
+        left: 35px;
+        top: 35px;
+        z-index: 10;
+      }
+      #blue {
+        background-color: blue;
+        left: 70px;
+        top: 70px;
+        /* fornisco al blue il valore più basso */
+        z-index: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>Z-INDEX</h2>
+    </header>
+    <main>
+      <!-- l'ordine di disegno da parte del browser è il principale discriminante
+         per capire lo stack degli elementi (l'incolonnamento) -->
+      <!-- l'ultimo elemento disegnato risulterà in cima agli altri -->
+      <div class="big-box">
+        <div id="red"></div>
+        <div id="green"></div>
+        <div id="blue"></div>
+      </div>
+    </main>
+  </body>
+</html>
