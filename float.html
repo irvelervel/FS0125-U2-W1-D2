@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proprietà Float in CSS</title>
+    <link rel="stylesheet" href="./assets/css/float.css" />
+  </head>
+  <body>
+    <header>
+      <h1>EPICODE</h1>
+      <nav>
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">CORSI</a></li>
+          <li><a href="#">DOCENTI</a></li>
+          <li><a href="#">CONTATTI</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- FLOAT rende un elemento "galleggiante": permette di allineare a dx o a sx
+         un contenuto, affiancandone sul lato libero il resto degli elementi -->
+      <!-- Pero', problema: un elemento dotato di float NON contribuisce più
+          all'altezza del contenitore! Di conseguenza, il nostro body non termina più
+          nel modo previsto -->
+      <!-- Come si risolve questo problema? Si risolve grazie alla proprietà "clear" -->
+      <!-- "clear" è una proprietà CSS che serve a "resettare", "ripulire" -->
+      <aside>
+        <img src="https://placedog.net/400" alt="doggo" />
+      </aside>
+      <section>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ullam,
+          modi sapiente laboriosam laborum voluptatum at! Voluptas, sed itaque
+          nihil deleniti minus atque tempora id suscipit nisi reprehenderit
+          necessitatibus vel? Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Nobis ullam, modi sapiente laboriosam laborum voluptatum at!
+          Voluptas, sed itaque nihil deleniti minus atque tempora id suscipit
+          nisi reprehenderit necessitatibus vel?
+        </p>
+      </section>
+    </main>
+    <footer>EPICODE - All Rights Reserved</footer>
+  </body>
+</html>
